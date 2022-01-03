@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    height: 100vh;
+    width: 100%;
+    background: url(/assets/image/Fundo_Sem_Faixa.png) no-repeat top center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(37 107 164);
+    overflow-x: hidden;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+.container {
+    background: rgb(255 255 255 / 65%);
+    height: auto;
+    max-width: 960px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 4rem;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first img {
+    max-width: 90%;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 60%;
+}
+
+.second p {
+    text-align: center;
+    font-size: 24px;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin-top: 3rem;
+}
+
+.third  h3{
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.third .third_icons_container {
+    display: flex;
+    flex-direction: column
+}
+
+.third .third_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.third .third_icons img {
+    width: 100%;
+    max-width: 120px;
+    margin: 0 18px;
+    opacity: 0;
+}
+
+@keyframes zoomBig {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        transform: scale(1.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.third .third_icons img.show-zoom {
+    animation: zoomBig 2s ease-in-out;
+}
+
+.fourth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin-top: 6rem;
+}
+
+.fourth  h3{
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.fourth .fourth_container_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fourth .fourth_images {
+    display: flex;
+    flex-direction: row;
+}
+
+.fourth .fourth_images div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 24px;
+
+}
+
+
+@keyframes rolling_left {
+    0% {
+        transform: translateX(-200%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes rolling_right {
+    0% {
+        transform: translateX(200%) rotate(0deg);
+        
+    }
+    100% {
+        transform: translateX(0) rotate(-360deg);
+    }
+}
+
+
+.fourth .fourth_images div img {
+    max-width: 100%;
+}
+
+
+
+.fourth .fourth_images div p {
+    text-align: center;
+    font-size: 32px;
+    margin: 12px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin-top: 6rem;
+}
+
+.fifth  h3{
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.fifth img {
+    max-width: 100%;
+}
+
+.sixth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+.sixth img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        max-width: 528px;
+    }
+
+    .logo img {
+        max-width: 320px;
+    }
+
+    .second {
+        max-width: 70%;
+    }
+    
+    .third .third_icons img {
+        max-width: 80px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .logo img {
+        max-width: 220px;
+    }
+
+    .first img {
+        max-width: 100%;
+    }
+
+    .second {
+        max-width: 100%;
+        padding: 0px 6px;
+    }
+
+    .second p {
+        font-size: 12pt!important;
+    }
+
+    h3 {
+        font-size: 17pt!important
+    }
+    
+    .third .third_icons img {
+        max-width: 62px;
+        margin: 0 8px;
+    }
+
+    .fourth {
+        max-width: 100%;
+        margin-top: 3rem;
+    }
+
+    .fourth .fourth_images div {
+        margin: 0px 6px;
+    }
+
+    .fourth .fourth_images div p {
+        font-size: 12pt;
+    }
+
+    .fifth {
+        margin-top: 3rem;
+    }
+
+    .fifth h3 {
+        margin-bottom: 2rem;
+    }
+
+    .sixth {
+        max-width: 90%;
+    }
+}
